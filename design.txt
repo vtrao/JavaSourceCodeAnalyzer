@@ -1,0 +1,344 @@
+25-11-2005 4:15 AM
+--------------------------------------------------------------------------------------------------------------------------
+
+                        		       JAVA Source Code Analyzer
+					       ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+								
+									     Project Team ::
+											      Venkat        2005-145
+											      Vidyadhar N   2005-147
+											      Vikas C       2005-148
+											      Vikash        2005-150
+											      Vikram        2005-151
+
+--------------------------------------------------------------------------------------------------------------------------
+
+-----------
+ CONTENTS
+-----------
+
+		1. ABSTRACT
+
+		2. REQUIREMENT SPECIFICATIONS
+
+		3. DESIGN ISSUES
+
+			3a. GRAMMAR EMPLOYED
+			3b. DATA STRUCTURES EMPLOYED
+
+		4. REQUIREMENTS MET
+
+		5. ASSUMPTIONS
+
+		6. HOW TO USE ?
+
+		7. REFERENCES 
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+------------
+ ABSTRACT
+------------
+                                                  This  project  involves  creating  a JAVA  source  code   analyzer. JAVA  code  analyzer  is  software  that  takes  a  set  of  JAVA  source  files  &  reports  on  the  various   characteristics  of  it.  This  can  be  used  to  find  potential  bugs  in  the  source  code  &  to  better  understand it. The  software  is  able  to  generate  a  report  on  the  various  characteristics  of  a  typical  JAVA  source code.
+
+
+----> It gives a report regarding the various classes that are imported or declared in a JAVA code given to it.
+
+----> This also tells us about the various functions & variables(public & static)that are declared in the JAVA source code.
+
+----> It also reports if any private function or variable has been left unused.
+
+----> There may be local variables to functions & there may be parameters associated with it which may be unused.
+
+----> The code analyzer also reports about these unused local variables & function parameters.
+
+----> The software also reports about all the classes which make  use of other classes.
+
+----> If a particular class uses an object of itself then the software reports about that also.
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------
+ REQUIREMENT SPECIFICATIONS
+----------------------------
+
+
+   1.   To find out the classes declared in each file and all the classes  imported in each file. 
+
+   2.   For each class, all the functions and variables. Mark out the public as well as static functions and variables.
+
+   3.   For each class, unused private functions and private variables. 
+
+   4.   For each function, unused local variables and function parameters.
+
+   5.   To find out which classes use which other classes & show a self reference if a class uses another object of it. 
+
+   6.   To report all the classes and/or functions that is not reachable starting from the main function. 
+
+   7.   To report any fragments of unreachable code. 
+
+   8.   Tracing out all the possible execution paths. 
+
+   9.   Tracing out the constructor invocation sequence for each class. 
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+------------------
+  DESIGN ISSUES
+------------------
+
+
+					This project entirely depends upon the grammar we define and the data structures we employ to get the required data at required levels and presented to the user for better interpretation of the java project as a whole. Therefore we have emphasized on these two aspects majorly and the same are presented below.
+
+		We have referred many Java Books as specified in the Reference section for better interpretation of Java grammar. The Conventional way of defining Context Free Grammar is 
+
+						G=(V,T,P,S)
+			
+		V --->  Set of Non - Terminals or Variables ( The Convention we have used is all CAPS )
+
+		T --->  Stands for Terminals ( The Convention we have used is small alphabets )
+
+		P --->  Set Of Productions
+
+		S --->  Starting Symbol
+
+THE GRAMMAR EMPLOYED : 
+
+	V = { S, PDS, PN, IDS, ID, STID, TIOD, SSID, SIDD, ITN, TDS, CD, EXTN, IMPS, CBS, CB, CBDS, CBD, CMD, B, BSS, BS,               CRLP, FD1, VDS1, VDD2, COM, FPS, FP, VDD1, T, PT, NT, FD, LL, LL1, VDS, VDD, FMS, FM2, FM, FM1, IT, FPT, RT,               CT, TDS1, TN, AT, TA, ATAL, ATA, ST, MD}
+
+	T = { pub, pri, voi, cla, identifier, thi, def, boo, flo, lon, sho, ing, cha, byt, dou, equ, sta, new, import,                   comma, cirbral, cirbrar, curbral, curbrar, dot, colon, semicolon, star, sqr, sql, ths, protect, abst, fin,                 imp, packet, ext, inter}
+		
+	S = S Start symbol of the grammar
+
+	P = { S ----> " "  | PDS IDS TDS | IDS TDS | PDS TDS | PDS IDS | IDS | TDS   
+              PDS--->  pack PN semicolon
+              PN --->  identifier| PN dot identifier
+	      IDS--->  ID | IDS ID
+	      ID --->  STID | TIODD | SSID | SIDD
+	      STID ->  import ITN semicolon
+	      TIODD->  import ITN dot star semicolon	
+	      SSID-->  import sta ITN dot identifier semicolon 
+	      SIDD-->  import sta ITN dot star semicolon
+	      ITN--->  identifier | ITN dot identifier                         
+	      TDS--->  CD | TDS CD
+	      CD --->  CBS pub cla identifier CB | CBS pub cla identifier EXTN CB  | CBS cla identifier CB |                                      CBS cla identifier EXTN CB | pub cla identifier CB | pub cla identifier EXTN  CB |                                         cla identifier CB | cla identifier EXTN CB
+	      EXTN-->  ext identifier | ext identifier imp IMPS | imp IMPS
+	      IMPS-->  identifier | IMPS comma identifier
+	      CBS--->  abst | fin
+	      CB --->  curbral CBDS curbrar | curbral curbrar
+	      CBDS-->  CBD | CBDS CBD
+	      CBD--->  CMD | B | ST
+	      CMD--->  FD | MD  | CD | semicolon
+	      B  --->  curbral BSS curbrar | curbral curbrar
+	      BSS--->  BS | BSS BS
+	      BS --->  FD1  | CD | CRLP | cirbral | cirbrar | semicolon | equ | colon | comma | dot | identifier | star
+	      CRLP-->  curbral BSS curbrar | curbral curbrar
+	      FD1--->  sta T VDS1 semicolon | T VDS1 semicolon
+	      VDS1-->  VDD2 | VDS1 comma VDD2
+	      VDD2--> identifier | identifier equ | identifier equ dot | VDD2 sql sqr
+ 	      COM---> identifier cirbral FPS cirbrar semicolon | identifier cirbral cirbrar B | 
+		      identifier cirbral FPS cirbrar B | identifier cirbral cirbrar ths identifier B | 
+		      identifier cirbral FPS cirbrar ths identifier B| identifier cirbral cirbrar semicolon
+	      FPS-->  FP | FPS comma FP
+	      FP--->  T VDD1
+	      VDD1->  identifier | identifier equ | identifier equ dot | VDD1 sql sqr
+	      T  -->  PT | RT
+	      PT -->  NT | boo
+              NT -->  IT | FPT
+	      FD -->  FMS T VDS semicolon | T VDS semicolon | FMS T identifier equ new identifier cirbral LL cirbrar |
+		      T identifier equ new identifier cirbral LL cirbrar |
+		      FMS T identifier equ new identifier dot identifier cirbral LL cirbrar |
+		      T identifier equ   new identifier dot identifier cirbral LL cirbrar
+	      LL -->  LL1 | LL comma LL1
+	      LL1-->  " " | identifier
+	      VDS-->  VDD | VDS comma VDD
+	      VDD-->  identifier | identifier equ | identifier equ dot | VDD sql sqr
+	      FMS-->  FM2 | FM | FM1 | FM1 FM | FM2 FM1 FM | FM2 FM | FM2 FM1
+	      FM2-->  fin
+ 	      FM--->  sta
+	      FM1-->  pub | pri | protect
+	      IT -->  byt | sho | lon | ing | cha
+	      FPT-->  flo | dou
+	      RT--->  CT | identifier | AT
+	      CT--->  TDS1 TA | TDS1
+	      TDS1->  TN | CT dot identifier
+	      TN--->  identifier | TN dot identifier
+	      AT--->  T sql sqr
+	      TA--->  ATAL
+	      ATAL->  ATA | ATAL comma ATA
+	      ATA-->  RT
+	      ST--->  sta B
+	      MD--->  FMS T COM | T COM | FMS voi  COM | FMS COM | voi  COM | COM	 
+	    }
+
+
+THE DATASTRUCTURES EMPLOYED : (RELATIONAL MODEL)
+
+	*** STRUCT CLL ***  ( Class Linked List )
+
+              _______________________________________________
+	     |             |           |          |          |         
+	     |    NAME	   |  ACCESS   | FILENAME |   CNT    |         
+	     |_____________|___________|__________|__________|
+             |             |           |          |          |
+             |             |           |          |          |
+		
+	*** STRUCT MFLL *** ( Member Function Linked List )
+	      _______________________________________________________________________________________________________
+             |             |           |          |          |           |           |          |          |        |
+             |    NAME     |  ACCESS   | FILENAME | ISSTATIC |  RETTYPE  |  ISCON    |CLASSNAME |   CNT    |  FLAG  | 
+             |_____________|___________|__________|__________|___________|___________|__________|__________|________|
+             |             |           |          |          |           |           |          |          |        |
+             |             |           |          |          |           |           |          |          |        | 
+
+	*** STRUCT FPLL *** ( Function Parameter Linked List )
+              _______________________________________________________________________________
+             |             |           |          |          |           |          |        |
+             |    NAME     | FUN~ NAME |   TYPE   | FILENAME | CLASSNAME |   CNT    |  FLAG  |
+             |_____________|___________|__________|__________|___________|__________|________|
+             |             |           |          |          |           |          |        |
+             |             |           |          |          |           |          |        |
+
+	*** STRUCT LVLL *** ( Local Variable Linked List )
+              ____________________________________________________________________________________________
+             |             |           |          |          |           |           |          |         |
+             |    NAME     |  TYPE     | FILENAME | ISSTATIC | FUN~NAME  |CLASS NAME |   CNT    | FLAG    |
+             |_____________|___________|__________|__________|___________|___________|__________|_________|
+             |             |           |          |          |           |           |          |         |
+             |             |           |          |          |           |           |          |         |
+
+	*** STRUCT MVLL *** ( Member Variable Linked List )
+              ______________________________________________________________________________________________
+             |             |           |          |          |           |           |          |          |
+             |    NAME     |  ACCESS   | FILENAME | ISSTATIC |    TYPE   |  FLAG     |CLASSNAME |   CNT    |
+             |_____________|___________|__________|__________|___________|___________|__________|__________|
+             |             |           |          |          |           |           |          |          |
+             |             |           |          |          |           |           |          |          |
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+-----------------
+ REQUIREMENTS MET 
+-----------------
+
+
+   1.   To find out the classes declared in each file and all the classes  imported in each file.
+
+   2.   For each class, all the functions and variables. Mark out the public as well as static functions and variables.
+
+   3.   For each class, unused private functions and private variables.
+
+   4.   For each function, unused local variables and function parameters.
+
+   5.   To find out which classes use which other classes & show a self reference if a class uses another object of it.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+-------------
+ ASSUMPTIONS
+-------------
+
+  1. As per the STANDARD JAVA CODING STANDARDS it is customary to have one class per one java file
+  	(WE CONSIDERED THIS AS A STANDARD AND DEVELOPED THIS TOOL)
+
+  2.  We have not considered interfaces in our tool.
+
+  3.  Array Initialization is not considered for example
+
+		int a[10] = {1,2,3...}; or String s[10]={"venki","vidya","vikas","vikram","vikash",...............};
+
+		These sort of cases are not considered,but however the cases like 
+
+		int[] a; or int a[] is considered (also a[0] is allowed , but a[i] is not allowed)
+
+  4. We have not considered the cases where variables are initialized to exponent values such as 
+
+		float d = 2.7E10;
+
+  5. Complex object creation like "venki ven=new venki(new a());",for these the grammar has not been defined.
+
+  6. Something like  "vikas vid=new vikas(a.y.d,system.out.x());",for these the grammar has not been defined.
+  
+--------------------------------------------------------------------------------------------------------------------------
+
+---------------
+  HOW TO USE ?
+---------------
+
+		 In   order  to  use  the  Java  Source  Code  Analyzer, it  is  preferable  to    have  each class  in  a  separate  Java file  as  per  the  STANDARD  JAVA CODING RULES .  To  run  the  Java  Code  Analyzer  type   in  the  following  command  followed  by  the  directory  name  which  consists  of  the  Java  Project  as shown below
+
+                                          mfc@linux:> make
+
+                                          mfc@linux:> ./v5 <DIRECTORY_NAME>
+
+
+                             Once this command is given the Java Source Code analyzer  generates text files by name "logfile.txt" which gives the information on various executions of the software (i.e.,log information of the software ) and            " analysis.txt "  which gives you the following report on the project
+
+
+
+----->  Classes declared in each file along with the Class Name & File Name
+
+----->  For each Class all the Functions and Variables along with their types
+
+----->  For each Function all the parameters and Local Variables along with their types, class name and file name
+
+----->  For each class, unused private functions and private variables.
+
+----->  For each function, unused local variables and function parameters.
+
+----->  It tells you  which classes use which other classes & tells you  if a class uses another object of itself.
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+------------
+ REFERENCES
+------------         		
+
+
+		Lex & Yacc 
+			                	             		  by	    John R. Levine
+					  			       		    Tony Mason
+					           		 		    Doug Brown
+			
+		A Compact Guide to Lex & Yacc
+				                  			  by        Thomas Niemann
+
+
+		The complete Reference JAVA 2 third edition
+									  by        Patrick Naughton
+									            Herbert Schildt
+
+		Thinking in JAVA
+			   			            		  by        Bruce Eckel
+
+
+		The C Programming Language
+	          					                  by        Bryan W. Kernighan
+		          						  	    Dennis M. Ritchie
+						
+
+
+--------------------------------------------------------------------------------------------------------------------------

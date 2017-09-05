@@ -1,0 +1,213 @@
+
+
+The Java Source Files are 
+
+		testinput1/vikram/ven.java 
+		testinput1/vikram/sharma/sharma.java 
+		testinput1/vikas/vikas.java 
+		testinput1/venki/vidya/vidya.java 
+		testinput1/ven.java 
+		testinput1/test/tesing.java 
+		testinput1/kk.java 
+
+
+
+
+The Classes Declared in the Java Project are as listed
+
+  NameoftheClass	  AccessType      FileName
+	  test       	  public    	 ven.java  
+	  vfm        	  default   	 vikas.java
+	  vfs        	  public    	 vikas.java
+	  vidya      	  public    	 vidya.java
+	  vikram     	  default   	 vidya.java
+	  test       	  public    	 ven.java  
+	  india      	  public    	 tesing.java
+	  ind2       	  default   	 tesing.java
+
+
+
+
+The Methods Declared in the Classes are as listed
+
+  Nameofthemethod		AccessType 	IsStaticOrNot	  ReturnType	ClassName	  FileName
+	  main      	 	public      	 static      	 void        	 vfm       	 vikas.java
+	  six       	 	            	 static      	 int         	 vfm       	 vikas.java
+	  mul       	 	public      	 static      	 double      	 vfs       	 vikas.java
+	  main      	 	public      	 static      	 void        	 vidya     	 vidya.java
+	  mul       	 	public      	             	 int         	 vidya     	 vidya.java
+	  add       	 	public      	 static      	 int         	 vikram    	 vidya.java
+	  main      	 	public      	             	 india       	 india     	 tesing.java
+	  add       	 	private     	             	 float       	 india     	 tesing.java
+	  method1   	 	public      	             	 india       	 ind2      	 tesing.java
+	  method2   	 	private     	             	 int         	 ind2      	 tesing.java
+
+
+
+
+ The Member Variables Declared in the Classes are as listed
+
+  NameofVariable	 	AccessType 	IsStaticOrNot	 Type      	ClassName	  FileName
+	  v         	 	private     	             	 int         	 vfm       	 vikas.java
+	  pakistan  	 	public      	 static      	 india       	 vfm       	 vikas.java
+	  x         	 	private     	             	 int         	 vfs       	 vikas.java
+	  y         	 	private     	             	 int         	 vfs       	 vikas.java
+	  s         	 	private     	             	 int         	 vfs       	 vikas.java
+	  d         	 	public      	             	 float       	 vfs       	 vikas.java
+	  x         	 	            	             	 int         	 india     	 tesing.java
+	  y         	 	            	             	 float       	 india     	 tesing.java
+	  ss        	 	private     	             	 double      	 india     	 tesing.java
+	  siii      	 	            	             	 india       	 india     	 tesing.java
+	  v         	 	            	             	 ind2        	 india     	 tesing.java
+	  yt        	 	public      	             	 int         	 ind2      	 tesing.java
+	  rt        	 	public      	             	 int         	 ind2      	 tesing.java
+	  er        	 	public      	             	 int         	 ind2      	 tesing.java
+	  ry        	 	private     	             	 float       	 ind2      	 tesing.java
+	  ut        	 	private     	             	 float       	 ind2      	 tesing.java
+	  iu        	 	private     	             	 float       	 ind2      	 tesing.java
+	  j         	 	private     	             	 con         	 ind2      	 tesing.java
+
+
+
+
+ The FunctionParameters of Various Functions are as listed
+
+ NameofParameter	  Type		 FuctionName 	 ClassName 	 Filename
+	  args      	 String     	 main       	 india      	 vikas.java
+	  q         	 int        	 main       	 india      	 vikas.java
+	  e         	 float      	 main       	 india      	 vikas.java
+	  k         	 int        	 six        	 vfm        	 vikas.java
+	  j         	 int        	 six        	 vfm        	 vikas.java
+	  l         	 int        	 mul        	 vidya      	 vikas.java
+	  m         	 int        	 mul        	 vidya      	 vikas.java
+	  args      	 String     	 main       	 india      	 vidya.java
+	  v         	 int        	 main       	 india      	 vidya.java
+	  x         	 int        	 mul        	 vidya      	 vidya.java
+	  y         	 int        	 mul        	 vidya      	 vidya.java
+	  x         	 int        	 add        	 india      	 vidya.java
+	  y         	 float      	 add        	 india      	 vidya.java
+	  z         	 double     	 add        	 india      	 vidya.java
+	  s         	 String     	 main       	 india      	 tesing.java
+
+
+
+
+ The Local Variables Declared in Various Functions are as listed
+
+ NameofLocalVariable 	 IsStaticOrNot 	 Type 		FunctionName 	 Classname 	 Filename
+	  ven       	 static     	 float      	 main       	 india      	 vikas.java
+	  vid       	 static     	 float      	 main       	 india      	 vikas.java
+	  pra       	 static     	 float      	 main       	 india      	 vikas.java
+	  x         	            	 int        	 six        	 vfm        	 vikas.java
+	  y         	            	 int        	 six        	 vfm        	 vikas.java
+	  joo       	            	 int        	 six        	 vfm        	 vikas.java
+	  moo       	            	 int        	 six        	 vfm        	 vikas.java
+	  mad       	            	 int        	 six        	 vfm        	 vikas.java
+	  var       	            	 float      	 mul        	 vidya      	 vikas.java
+	  dar       	            	 float      	 mul        	 vidya      	 vikas.java
+	  mann      	 static     	 double     	 mul        	 vidya      	 vikas.java
+	  swee      	 static     	 double     	 mul        	 vidya      	 vikas.java
+	  x         	            	 int        	 main       	 india      	 vidya.java
+	  j         	            	 int        	 main       	 india      	 vidya.java
+	  u         	            	 int        	 main       	 india      	 vidya.java
+	  g         	            	 int        	 main       	 india      	 vidya.java
+	  j         	            	 int        	 main       	 india      	 vidya.java
+	  k         	            	 int        	 main       	 india      	 vidya.java
+	  x         	 static     	 int        	 add        	 india      	 vidya.java
+	  y         	 static     	 int        	 add        	 india      	 vidya.java
+	  sri       	            	 int        	 main       	 india      	 tesing.java
+	  app       	            	 int        	 main       	 india      	 tesing.java
+	  lik       	            	 int        	 main       	 india      	 tesing.java
+	  si        	            	 india      	 main       	 india      	 tesing.java
+	  x1        	            	 float      	 add        	 india      	 tesing.java
+	  x2        	            	 float      	 add        	 india      	 tesing.java
+	  myhoona   	            	 india      	 method1    	 ind2       	 tesing.java
+	  myayanaa  	            	 india      	 method1    	 ind2       	 tesing.java
+	  right     	 static     	 ind2       	 method2    	 ind2       	 tesing.java
+	  fullstop  	            	 ind2       	 method2    	 ind2       	 tesing.java
+	  d         	 static     	 int        	 method2    	 ind2       	 tesing.java
+
+
+
+
+
+These are the unused Private member variables and methods
+
+----->In Class "test" of File "ven.java" 
+----->In Class "vfm" of File "vikas.java" 
+		 Unused Private Variable is-->  v
+----->In Class "vfs" of File "vikas.java" 
+		 Unused Private Variable is-->  x
+		 Unused Private Variable is-->  y
+		 Unused Private Variable is-->  s
+----->In Class "vidya" of File "vidya.java" 
+----->In Class "vikram" of File "vidya.java" 
+----->In Class "test" of File "ven.java" 
+----->In Class "india" of File "tesing.java" 
+		 Unused Private Function is-->  add()
+		 Unused Private Variable is-->  ss
+----->In Class "ind2" of File "tesing.java" 
+		 Unused Private Function is-->  method2()
+		 Unused Private Variable is-->  ry
+		 Unused Private Variable is-->  ut
+		 Unused Private Variable is-->  iu
+		 Unused Private Variable is-->  j
+
+
+
+
+These are the unused Function Parameters and Local Variables
+
+----->In Function "main" of Class "vfm" in File "vikas.java" 
+----->In Function "six" of Class "vfm" in File "vikas.java" 
+		 Unused Parameter is --> k
+		 Unused Parameter is --> j
+		 Unused Parameter is --> x
+		 Unused Parameter is --> y
+		 Unused Parameter is --> joo
+		 Unused Parameter is --> moo
+		 Unused Parameter is --> mad
+----->In Function "mul" of Class "vfs" in File "vikas.java" 
+----->In Function "main" of Class "vidya" in File "vidya.java" 
+----->In Function "mul" of Class "vidya" in File "vidya.java" 
+		 Unused Parameter is --> x
+		 Unused Parameter is --> y
+----->In Function "add" of Class "vikram" in File "vidya.java" 
+----->In Function "main" of Class "india" in File "tesing.java" 
+		 Unused Parameter is --> s
+		 Unused Parameter is --> sri
+		 Unused Parameter is --> app
+		 Unused Parameter is --> lik
+		 Unused Parameter is --> si
+----->In Function "add" of Class "india" in File "tesing.java" 
+		 Unused Parameter is --> x1
+		 Unused Parameter is --> x2
+----->In Function "method1" of Class "ind2" in File "tesing.java" 
+		 Unused Parameter is --> myhoona
+		 Unused Parameter is --> myayanaa
+----->In Function "method2" of Class "ind2" in File "tesing.java" 
+		 Unused Parameter is --> right
+		 Unused Parameter is --> fullstop
+		 Unused Parameter is --> d
+
+
+
+
+These are Dependencies among the Various Classes of the Project
+
+---> These are the Dependencies in the Member Variable Section
+
+	 The "vfm" class is (pakistan) making use of "india" class in File "vikas.java" 
+	 The "india" class is (siii) making use of "india" class in File "tesing.java" -->This is a self reference
+	 The "india" class is (v) making use of "ind2" class in File "tesing.java" 
+
+---> These are the Dependencies in the Local Variable Section(in a Member Function )
+
+	 The "india" class is (si) making use of "india" class in File "tesing.java" -->This is a self reference
+	 The "ind2" class is (myhoona) making use of "india" class in File "tesing.java" 
+	 The "ind2" class is (myayanaa) making use of "india" class in File "tesing.java" 
+	 The "ind2" class is (right) making use of "ind2" class in File "tesing.java" -->This is a self reference
+	 The "ind2" class is (fullstop) making use of "ind2" class in File "tesing.java" -->This is a self reference
+
+					Thank Q
+

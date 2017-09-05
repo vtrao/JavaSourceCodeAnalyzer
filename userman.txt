@@ -1,0 +1,36 @@
+25-11-2005 3:40 AM
+==========================================================================================================================
+
+					  	JAVA SOURCE CODE ANALYZER                                           
+
+
+					              USER MANUAL 
+
+==========================================================================================================================
+
+                     
+		                         In   order  to  use  the  Java  Source  Code  Analyzer, it  is  preferable  to    have  each class  in  a  separate  Java file  as  per  the  STANDARD  JAVA CODING RULES .  To  run  the  Java  Code  Analyzer  type   in  the  following  command  followed  by  the  directory  name  which  consists  of  the  Java  Project  as shown below
+ 
+					  mfc@linux:> make
+
+					  mfc@linux:> ./v5 <DIRECTORY_NAME>	
+
+
+			     Once this command is given the Java Source Code analyzer  generates text files by name "logfile.txt" which gives the information on various executions of the software (i.e.,log information of the software ) and            " analysis.txt "  which gives you the following report on the project 
+
+
+
+----->  Classes declared in each file along with the Class Name & File Name
+
+----->  For each Class all the Functions and Variables along with their types 
+
+----->  For each Function all the parameters and Local Variables along with their types, class name and file name
+
+----->  For each class, unused private functions and private variables. 
+
+----->  For each function, unused local variables and function parameters.
+
+----->  It tells you  which classes use which other classes & tells you  if a class uses another object of itself.
+
+
+==========================================================================================================================

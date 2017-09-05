@@ -1,0 +1,25 @@
+venkatnaidu@users.sourceforge.net 
+
+
+   	  PROJECTS DONE AT International Institute of Information Technology Bangalore
+
+
+
+3 ########MFC PROJECT:
+	
+		Title: Java Code Analyser                        Status: COMPLETED (PARTIALLY LEFT)
+
+		Platform: Linux (SUSE)				 Programming Language: FLex & Bison
+
+	Roll Number		Name				 Email-ID:
+	2005145          Venkata Thippanna Rao P  R              venkata.thippannarao@iiitb.ac.in 
+
+	2005147          Vidyadhar Nemalapuri                    vidyadhar.nemalapuri@iiitb.ac.in 
+
+	2005148          Vikas C                                 vikas.c@iiitb.ac.in
+	
+	2005151          Vikram Jain                             vikramelite@iiitb.ac.in 
+	
+	2005150		 Vikash Sharma                           vikash.sharma@iiitb.ac.in
+
+

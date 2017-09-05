@@ -1,0 +1,173 @@
+Sat Nov 26 02:42:35 IST 2005
+
+
+The JAVA Source Files are 
+
+		testinput1/vikram/ven.java 
+		testinput1/vikram/sharma/sharma.java 
+		testinput1/vikas/vikas.java 
+		testinput1/venki/vidya/vidya.java 
+		testinput1/ven.java 
+		testinput1/test/tesing.java 
+		testinput1/kk.java 
+--------------------------------------------------------------------------
+
+
+Sat Nov 26 02:42:39 IST 2005
+
+
+The JAVA Source Files are 
+
+		testinput2/module3/testing.java 
+		testinput2/module3/9.java 
+		testinput2/module3/8.java 
+		testinput2/module2/mod2/5.java 
+		testinput2/module2/mod1/3.java 
+		testinput2/module2/mod1/1.java 
+		testinput2/module2/7.java 
+		testinput2/module2/4.java 
+		testinput2/module1/mod1/6.java 
+		testinput2/module1/2.java 
+--------------------------------------------------------------------------
+
+
+Sat Nov 26 02:42:42 IST 2005
+
+No JAVA Source Found in Project Exting......!
+--------------------------------------------------------------------------
+
+
+Sat Nov 26 02:42:44 IST 2005
+improper no. of arguments
+--------------------------------------------------------------------------
+
+
+Sat Nov 26 02:44:29 IST 2005
+
+
+The JAVA Source Files are 
+
+		testinput1/vikram/ven.java 
+		testinput1/vikram/sharma/sharma.java 
+		testinput1/vikas/vikas.java 
+		testinput1/venki/vidya/vidya.java 
+		testinput1/ven.java 
+		testinput1/test/tesing.java 
+		testinput1/kk.java 
+--------------------------------------------------------------------------
+
+
+Sat Nov 26 02:45:00 IST 2005
+
+
+The JAVA Source Files are 
+
+		testinput2/module3/testing.java 
+		testinput2/module3/9.java 
+		testinput2/module3/8.java 
+		testinput2/module2/mod2/5.java 
+		testinput2/module2/mod1/3.java 
+		testinput2/module2/mod1/1.java 
+		testinput2/module2/7.java 
+		testinput2/module2/4.java 
+		testinput2/module1/mod1/6.java 
+		testinput2/module1/2.java 
+--------------------------------------------------------------------------
+
+
+Sat Nov 26 02:47:18 IST 2005
+
+
+The JAVA Source Files are 
+
+		testinput1/vikram/ven.java 
+		testinput1/vikram/sharma/sharma.java 
+		testinput1/vikas/vikas.java 
+		testinput1/venki/vidya/vidya.java 
+		testinput1/ven.java 
+		testinput1/test/tesing.java 
+		testinput1/kk.java 
+--------------------------------------------------------------------------
+
+
+Fri Dec  2 16:14:56 MST 2005
+
+
+The JAVA Source Files are 
+
+		testinput1/vikram/ven.java 
+		testinput1/vikram/sharma/sharma.java 
+		testinput1/vikas/vikas.java 
+		testinput1/venki/vidya/vidya.java 
+		testinput1/ven.java 
+		testinput1/test/tesing.java 
+		testinput1/kk.java 
+--------------------------------------------------------------------------
+
+
+Fri Dec  2 16:15:21 MST 2005
+
+
+The JAVA Source Files are 
+
+		testinput1/vikram/ven.java 
+		testinput1/vikram/sharma/sharma.java 
+		testinput1/vikas/vikas.java 
+		testinput1/venki/vidya/vidya.java 
+		testinput1/ven.java 
+		testinput1/test/tesing.java 
+		testinput1/kk.java 
+--------------------------------------------------------------------------
+
+
+Fri Dec  2 16:15:24 MST 2005
+
+
+The JAVA Source Files are 
+
+		testinput2/module3/testing.java 
+		testinput2/module3/9.java 
+		testinput2/module3/8.java 
+		testinput2/module2/mod2/5.java 
+		testinput2/module2/mod1/3.java 
+		testinput2/module2/mod1/1.java 
+		testinput2/module2/7.java 
+		testinput2/module2/4.java 
+		testinput2/module1/mod1/6.java 
+		testinput2/module1/2.java 
+--------------------------------------------------------------------------
+
+
+Fri Dec  2 16:15:27 MST 2005
+
+
+The JAVA Source Files are 
+
+		testinput2/module3/testing.java 
+		testinput2/module3/9.java 
+		testinput2/module3/8.java 
+		testinput2/module2/mod2/5.java 
+		testinput2/module2/mod1/3.java 
+		testinput2/module2/mod1/1.java 
+		testinput2/module2/7.java 
+		testinput2/module2/4.java 
+		testinput2/module1/mod1/6.java 
+		testinput2/module1/2.java 
+--------------------------------------------------------------------------
+
+
+Fri Dec  2 16:15:40 MST 2005
+
+
+The JAVA Source Files are 
+
+		testinput1/vikram/ven.java 
+		testinput1/vikram/sharma/sharma.java 
+		testinput1/vikas/vikas.java 
+		testinput1/venki/vidya/vidya.java 
+		testinput1/ven.java 
+		testinput1/test/tesing.java 
+		testinput1/kk.java 
+--------------------------------------------------------------------------
+
+
